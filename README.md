@@ -6,6 +6,8 @@ Thank you [take U forward](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz6
 
 The solutions will be included but if you want to search or practice for different solution, search the question in leetcode and geeksforgeeks.
 
+To directly run the code given, change input.txt to give your input and keep the folders and file as they are.
+
 ### Day 1 -> Arrays
 
 1. Find the duplicate in an array of N integers
