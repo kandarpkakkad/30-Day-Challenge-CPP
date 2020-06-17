@@ -13,6 +13,8 @@ int main() {
 	// Method 1:
 	// If N < 3 then print N rows each containing i elements.
 	// Else 1st two rows contain 1 and 2 1s and nth row contains 1st and last element 1 and middle elements as sum of previous row's ith element + (i - 1)th element.
+	// Time Complexity: O(n^2)
+	// Space Complexity: O(n^2)
 	vector<vector<long long>> ans;
 	if (N < 3) {
 		for (long long i = 1; i <= N; i++) {

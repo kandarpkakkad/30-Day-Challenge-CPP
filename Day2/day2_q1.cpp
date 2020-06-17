@@ -49,7 +49,7 @@ int main() {
 	// Method 2:
 	// We will create two sets that will store the rows and columns which has 0 and then we will make those rows and columns 0
 	// Time Complexity = O(n*m)
-	// Space Complexity = O(1)
+	// Space Complexity = O(n + m)
 	set<long long> row, col;
 	for (long long i = 0; i < N; i++) {
 		for (long long j = 0; j < M; j++) {
