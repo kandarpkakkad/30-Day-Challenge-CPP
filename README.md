@@ -60,8 +60,7 @@ To directly run the code given, change input.txt to give your input and keep the
 3. Reverse a LinkedList in groups. 
 4. Detect a cycle and removing loop(two different questions and same concept) 
 5. Flattening of a LinkedList 
-6. Rotate a LinkedList 
-7. Clone a Linked List with random and next pointer.
+6. Rotate a LinkedList
 
 ### Day 7 -> 2 - Pointer
 
