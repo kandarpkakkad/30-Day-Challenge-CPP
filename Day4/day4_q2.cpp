@@ -2,6 +2,49 @@
 
 using namespace std;
 
+vector<vector<long long>> k_sum(long long arr[], long long N, long long k, long long x, long long start) {
+	vector<vector<long long>> ans;
+	if (k == 2) {
+		long long i = start, j = N - 1;
+		while (i < j) {
+			if (arr[i] + arr[j] < x) {
+				i++;
+			}
+			else if (arr[i] + arr[j] > x) {
+				j--;
+			}
+			else {
+				ans.push_back({arr[i], arr[j]});
+				while (i < j && arr[i] == arr[i + 1]) {
+					i++;
+				}
+				while (i < j && arr[j] == arr[j - 1]) {
+					j--;
+				}
+				i++;
+				j--;
+			}
+		}
+	}
+	else {
+		for (long long i = start; i < N - k + 1; i++) {
+			if (i != 0 && arr[i] == arr[i - 1]) {
+				continue;
+			}
+			vector<vector<long long>> a = k_sum(arr, N, k - 1, x - arr[i], i + 1);
+			if (a.size() > 0) {
+				for (long long j = 0; j < a.size(); j++) {
+					a[j].push_back(arr[i]);
+				}
+				for (long long j = 0; j < a.size(); j++) {
+					ans.push_back(a[j]);
+				}
+			}
+		}
+	}
+	return ans;
+}
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
@@ -34,7 +77,7 @@ int main() {
 			if (mp.find(x - sum) != mp.end()) {
 				vector<pair<long long, long long>> p = mp[x - sum];
 				for (long long k = 0; k < p.size(); k++) {
-					if (p[k].first != i && p[k].first != i && p[k].second != j && p[k].second != i) {
+					if (p[k].first != i && p[k].first != j && p[k].second != j && p[k].second != i) {
 						v.clear();
 						v.push_back(arr[i]);
 						v.push_back(arr[j]);
@@ -57,5 +100,26 @@ int main() {
 		cout << endl;
 	}
 	cout << endl;
+
+	// Method 2:
+	// Same method but we will generalize it to k sum where k >= 2 with recursive method.
+	// Time Complexity: O(n^2)
+	// Space Complexity: O(n^2)
+	long long k = 4;
+	if (N >= k) {
+		ans = k_sum(arr, N, k, x, 0);
+	}
+	if (ans.size() > 0) {
+		for (long long i = 0; i < ans.size(); i++) {
+			for (long long j = 0; j < ans[i].size(); i++) {
+				cout << ans[i][j] << " ";
+			}
+			cout << endl;
+		}
+		cout << endl;
+	}
+	else {
+		cout << "No Solution" << endl;
+	}
 	return 0;
 }
