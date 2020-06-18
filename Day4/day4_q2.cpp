@@ -25,20 +25,19 @@ vector<vector<long long>> k_sum(long long arr[], long long N, long long k, long 
 				j--;
 			}
 		}
+		return ans;
 	}
-	else {
-		for (long long i = start; i < N - k + 1; i++) {
-			if (i != 0 && arr[i] == arr[i - 1]) {
-				continue;
+	for (long long i = start; i < N - k + 1; i++) {
+		if (i != start && arr[i] == arr[i - 1]) {
+			continue;
+		}
+		vector<vector<long long>> a = k_sum(arr, N, k - 1, x - arr[i], i + 1);
+		if (a.size() > 0) {
+			for (long long j = 0; j < a.size(); j++) {
+				a[j].push_back(arr[i]);
 			}
-			vector<vector<long long>> a = k_sum(arr, N, k - 1, x - arr[i], i + 1);
-			if (a.size() > 0) {
-				for (long long j = 0; j < a.size(); j++) {
-					a[j].push_back(arr[i]);
-				}
-				for (long long j = 0; j < a.size(); j++) {
-					ans.push_back(a[j]);
-				}
+			for (long long j = 0; j < a.size(); j++) {
+				ans.push_back(a[j]);
 			}
 		}
 	}
@@ -105,13 +104,15 @@ int main() {
 	// Same method but we will generalize it to k sum where k >= 2 with recursive method.
 	// Time Complexity: O(n^2)
 	// Space Complexity: O(n^2)
+	ans.clear();
 	long long k = 4;
 	if (N >= k) {
 		ans = k_sum(arr, N, k, x, 0);
 	}
 	if (ans.size() > 0) {
 		for (long long i = 0; i < ans.size(); i++) {
-			for (long long j = 0; j < ans[i].size(); i++) {
+			sort(ans[i].begin(), ans[i].end());
+			for (long long j = 0; j < ans[i].size(); j++) {
 				cout << ans[i][j] << " ";
 			}
 			cout << endl;
