@@ -2,7 +2,17 @@
 
 using namespace std;
 
-long long expo(double N, long long x) {
+/*
+	https://leetcode.com/problems/powx-n/
+
+	Input:
+	5.5 17
+
+	Output:
+	3856254795069.07470703125
+*/
+
+double expo(double N, long long x) {
 	if (x == 0) {
 		return 1;
 	}

@@ -2,6 +2,16 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/factorial-trailing-zeroes/
+
+	Input:
+	15
+
+	Output:
+	3
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

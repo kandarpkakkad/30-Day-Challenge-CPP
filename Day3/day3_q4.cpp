@@ -2,6 +2,17 @@
 
 using namespace std;
 
+/*
+	https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
+
+	Input:
+	15 20
+
+	Output:
+	5
+	5
+*/
+
 long long gcd(long long a, long long b) {
 	if (a == 0) {
 		return b;

@@ -2,6 +2,16 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/excel-sheet-column-number/
+
+	Input:
+	BABY
+
+	Output:
+	155
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

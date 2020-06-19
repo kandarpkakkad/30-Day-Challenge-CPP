@@ -2,131 +2,56 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/greatest-common-divisor-of-strings
+
+	Input:
+	ABCABCABC
+	ABC
+
+	Output:
+	ABC
+*/
+
+long long gcd(long long a, long long b) {
+	if (a == 0) {
+		return b;
+	}
+	return gcd(b % a, a);
+}
+
+string gcd_of_strings(string s1, string s2) {
+	string ans = "";
+	if (s1 + s2 != s2 + s1) {
+		return ans;
+	}
+	long long N = s1.length();
+	long long M = s2.length();
+	if (N == M) {
+		return s1;
+	}
+	long long min_size = N < M ? N : M;
+	long long max_size = N > M ? N : M;
+	min_size = gcd(min_size, max_size);
+	for (long long i = 0; i < min_size; i++) {
+		ans += s1[i];
+	}
+	return ans;
+}
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
 	freopen("../output.txt", "w", stdout);
 #endif
-	/*
-	HR Round Puzzles -> https://www.geeksforgeeks.org/puzzles/
-	Programming Puzzles -> https://www.geeksforgeeks.org/tag/programming-puzzle/
-	Few programming puzzles are solved below.
-	*/
+	string s1, s2;
+	cin >> s1 >> s2;
 
-	// Q1. Count the number of trailing zeroes in 1^1 * 2^2 * 3^3 * .... * n^n.
-	/*
-	long long N;
-	cin >> N;
-	long long cnt2 = 0, cnt5 = 0;
-	for (long long i = 1; i <= N; i++) {
-		long long temp = i;
-		while (temp % 2 == 0 && temp > 0) {
-			temp /= 2;
-			cnt2 += i; // adding i because of the power
-		}
-		while (temp % 5 == 0 && temp > 0) {
-			temp /= 5;
-			cnt5 += i; // adding i because of the power
-		}
-	}
-	long long ans = min(cnt2, cnt5);
+	// Method 1:
+	// we find gcd of lengths if s1 + s2 = s2 + s1. and return 1st gcd letters of the string.
+	// Time Complexity: O(log(n))
+	// Space Complexity: O(n)
+	string ans = gcd_of_strings(s1, s2);
 	cout << ans << endl;
-	*/
-
-	// Q2. Number of wins for each player in a series of Rock-Paper-Scissor
-	/*
-	long long k;
-	cin >> k;
-	string a, b;
-	cin >> a;
-	cin >> b;
-	long long N = a.length();
-	long long M = b.length();
-	long long moves = N * M;
-	long long i = 0;
-	long long j = 0;
-	long long player1_win = 0, player2_win = 0;
-	while (moves--) {
-		long long res = -3;
-		if (a[i] == b[i]) {
-			res = 0;
-		}
-		if (a[i] == 'R') {
-			if (b[i] == 'S') {
-				res = 1;
-			}
-			else if (b[i] == 'P') {
-				res = -1;
-			}
-		}
-		if (a[i] == 'P') {
-			if (b[i] == 'R') {
-				res = 1;
-			}
-			else if (b[i] == 'S') {
-				res = -1;
-			}
-		}
-		if (a[i] == 'S') {
-			if (b[i] == 'P') {
-				res = 1;
-			}
-			else if (b[i] == 'R') {
-				res = -1;
-			}
-		}
-		if (res == 1) {
-			player1_win++;
-		}
-		if (res == -1) {
-			player2_win++;
-		}
-		i = (i + 1) % N;
-		j = (j + 1) % M;
-	}
-	long long repeat = k / (N * M);
-	player1_win *= repeat;
-	player2_win *= repeat;
-	long long remaining = k % (N * M);
-	while (remaining--) {
-		long long res = -3;
-		if (a[i] == b[i]) {
-			res = 0;
-		}
-		if (a[i] == 'R') {
-			if (b[i] == 'S') {
-				res = 1;
-			}
-			else if (b[i] == 'P') {
-				res = -1;
-			}
-		}
-		if (a[i] == 'P') {
-			if (b[i] == 'R') {
-				res = 1;
-			}
-			else if (b[i] == 'S') {
-				res = -1;
-			}
-		}
-		if (a[i] == 'S') {
-			if (b[i] == 'P') {
-				res = 1;
-			}
-			else if (b[i] == 'R') {
-				res = -1;
-			}
-		}
-		if (res == 1) {
-			player1_win++;
-		}
-		if (res == -1) {
-			player2_win++;
-		}
-		i = (i + 1) % N;
-		j = (j + 1) % M;
-	}
-	cout << player1_win << " " << player2_win << endl;
-	*/
 	return 0;
 }
