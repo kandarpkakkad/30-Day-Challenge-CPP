@@ -2,6 +2,20 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/reverse-nodes-in-k-group/
+
+	You need to run the methods one by one.
+
+	Input:
+	5 2
+	5 4 3 2 1
+
+	Output:
+	2 1 4 3 5
+	2 1 4 3 5
+*/
+
 struct node {
 	long long val;
 	struct node *next;
@@ -90,19 +104,19 @@ int main() {
 	// Time Complexity: O(n)
 	// Space Complexity: O(1)
 	struct node *ans = reversek(head, k);
-	struct node *pre, *curr, *post;
-	pre = NULL;
-	curr = ans;
-	post = ans->next;
-	while (curr != NULL) {
-		curr->next = pre;
-		pre = curr;
-		curr = post;
-		if (curr) {
-			post = post->next;
-		}
-	}
-	ans = pre;
+	// struct node *pre, *curr, *post;
+	// pre = NULL;
+	// curr = ans;
+	// post = ans->next;
+	// while (curr != NULL) {
+	// 	curr->next = pre;
+	// 	pre = curr;
+	// 	curr = post;
+	// 	if (curr) {
+	// 		post = post->next;
+	// 	}
+	// }
+	// ans = pre;
 	temp = ans;
 	while (temp) {
 		cout << temp->val << " ";
@@ -115,18 +129,18 @@ int main() {
 	// Time Complexity: O(n)
 	// Space Complexity: O(1)
 	ans = reversek_2(ans, k);
-	pre = NULL;
-	curr = ans;
-	post = ans->next;
-	while (curr != NULL) {
-		curr->next = pre;
-		pre = curr;
-		curr = post;
-		if (curr) {
-			post = post->next;
-		}
-	}
-	ans = pre;
+	// pre = NULL;
+	// curr = ans;
+	// post = ans->next;
+	// while (curr != NULL) {
+	// 	curr->next = pre;
+	// 	pre = curr;
+	// 	curr = post;
+	// 	if (curr) {
+	// 		post = post->next;
+	// 	}
+	// }
+	// ans = pre;
 	temp = ans;
 	while (temp) {
 		cout << temp->val << " ";

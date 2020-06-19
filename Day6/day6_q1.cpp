@@ -2,6 +2,24 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/intersection-of-two-linked-lists/
+
+	You need to run the methods one by one.
+
+	Input:
+	6 4
+	6 5 4 3 2 1
+	10 9 8 7
+
+	Output:
+	1 2 3 4 5 6
+	7 8 9 10 5 6
+	Joining point is 5.
+	Joining point is 5.
+	Joining point is 5
+*/
+
 struct node {
 	long long val;
 	struct node *next;

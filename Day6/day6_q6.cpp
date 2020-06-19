@@ -2,6 +2,23 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/rotate-list/
+
+	You need to run the methods one by one.
+
+	Input:
+	6 2
+	1 2 3 4 5 6
+
+	Output:
+	6 5 4 3 2 1
+	Left Shift
+	4 3 2 1 6 5
+	Right Shift
+	2 1 6 5 4 3
+*/
+
 struct node {
 	long long val;
 	struct node *next;

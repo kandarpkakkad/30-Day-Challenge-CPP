@@ -2,6 +2,23 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/linked-list-cycle/
+
+	You need to run the methods one by one.
+
+	Input:
+	8
+	5 4 3 2 1 6 7 8
+
+	Output:
+	2 is the loop starting node.
+	8 7 6 1 2 3 4 5
+	2 is the loop starting node.
+	8 7 6 1 2 3 4 5
+
+*/
+
 struct node {
 	long long val;
 	struct node *next;
@@ -53,7 +70,7 @@ int main() {
 		cout << "No Loop" << endl;
 	}
 	else {
-		cout << temp->val << " is the joining node." << endl;
+		cout << temp->val << " is the loop starting node." << endl;
 		struct node *save = temp;
 		while (temp->next != save) {
 			temp = temp->next;
@@ -71,7 +88,7 @@ int main() {
 	// 2 pointer solution. One will move faster and when again two pointer traversal will give the starting of the loop.
 	// Time Complexity: O(n)
 	// Space Complexity: O(1)
-	struct node *slow, *fast;
+	struct node *slow;
 	slow = head;
 	fast = head;
 	while (slow && fast && fast->next) {
@@ -97,7 +114,7 @@ int main() {
 			cout << "No Loop." << endl;
 		}
 		else {
-			cout << temp->val << " is the joining node." << endl;
+			cout << temp->val << " is the loop starting node." << endl;
 			struct node *save = temp;
 			while (temp->next != save) {
 				temp = temp->next;

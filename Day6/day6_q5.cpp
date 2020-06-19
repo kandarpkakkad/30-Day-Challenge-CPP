@@ -2,6 +2,21 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
+
+	Input:
+	6
+	1 2 3 4 5 6
+	3
+	7 8 9
+	2
+	10 11
+
+	Output:
+	6 5 4 3 9 8 11 10 7 2 1
+*/
+
 struct node {
 	long long val;
 	struct node *next;

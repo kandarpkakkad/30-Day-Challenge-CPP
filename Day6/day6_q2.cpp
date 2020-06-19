@@ -2,6 +2,26 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/palindrome-linked-list/
+
+	Input:
+	6
+	1 0 1 1 0 1
+
+	Output:
+	Palindrome
+	Palindrome
+
+	Input:
+	6
+	1 0 0 1 0 1
+
+	Output:
+	Not Palindrome
+	Not Palindrome
+*/
+
 struct node {
 	long long val;
 	struct node *next;
