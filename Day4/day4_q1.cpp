@@ -2,6 +2,23 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/two-sum/
+
+	Input:
+	7 8
+	1 2 3 4 5 6 7
+
+	Output:
+	1 7
+	2 6
+	3 5
+
+	3 5
+	2 6
+	1 7
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
@@ -27,9 +44,14 @@ int main() {
 		cout << -1 << endl;
 	}
 	else {
+		vector<pair<long long, long long>> res;
+		bool f = false;
 		while (pos1 < pos2) {
 			if (arr[pos1] + arr[pos2] == x) {
-				break;
+				f = true;
+				res.push_back({pos1 + 1, pos2 + 1});
+				pos1++;
+				pos2--;
 			}
 			else if (arr[pos1] + arr[pos2] > x) {
 				pos2--;
@@ -38,11 +60,14 @@ int main() {
 				pos1++;
 			}
 		}
-		if (pos1 >= pos2) {
+		if (!f) {
 			cout << -1 << endl;
 		}
 		else {
-			cout << pos1 + 1 << " " << pos2 + 1 << endl;
+			for (long long i = 0; i < res.size(); i++) {
+				cout << res[i].first << " " << res[i].second << endl;
+			}
+			cout << endl;
 		}
 	}
 	// Method 2:
@@ -50,6 +75,7 @@ int main() {
 	// Time Complexity: O(n)
 	// Space Complexity: O(1)
 	unordered_map<long long, long long> dic;
+	vector<pair<long long, long long>> ans;
 	bool flag = false;
 	long long ans1 = 0, ans2 = 0;
 	for (long long i = 0; i <  N; i++) {
@@ -57,12 +83,14 @@ int main() {
 			flag = true;
 			ans1 = dic[x - arr[i]];
 			ans2 = i;
-			break;
+			ans.push_back({ans1 + 1, ans2 + 1});
 		}
 		dic[arr[i]] = i;
 	}
 	if (flag) {
-		cout << ans1 + 1 << " " << ans2 + 1 << endl;
+		for (long long i = 0; i < ans.size(); i++) {
+			cout << ans[i].first << " " << ans[i].second << endl;
+		}
 	}
 	else {
 		cout << -1 << endl;

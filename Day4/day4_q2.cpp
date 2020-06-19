@@ -2,6 +2,27 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/4sum/
+
+	Input:
+	7 16
+	1 2 3 4 5 6 7
+
+	Output:
+	1 2 6 7
+	1 3 5 7
+	1 4 5 6
+	2 3 4 7
+	2 3 5 6
+
+	1 2 6 7
+	1 3 5 7
+	1 4 5 6
+	2 3 4 7
+	2 3 5 6
+*/
+
 vector<vector<long long>> k_sum(long long arr[], long long N, long long k, long long x, long long start) {
 	vector<vector<long long>> ans;
 	if (k == 2) {

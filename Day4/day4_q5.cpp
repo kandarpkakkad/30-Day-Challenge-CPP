@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+	https://www.geeksforgeeks.org/count-number-subarrays-given-xor/
+
+	Input:
+	5 6
+	5 6 7 8 9
+
+	Output:
+	2
+	2
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

@@ -2,6 +2,17 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
+	Input:
+	abcdabcbb
+
+	Output:
+	4
+	4
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/subarray-sum-equals-k/
+
+	Input:
+	6
+	-1 0 1 0 2 -1
+
+	Output:
+	4
+	4
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

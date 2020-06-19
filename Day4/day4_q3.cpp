@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/longest-consecutive-sequence/
+
+	Input:
+	100 4 200 1 3 2
+
+	Output:
+	4
+	4
+	4
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
