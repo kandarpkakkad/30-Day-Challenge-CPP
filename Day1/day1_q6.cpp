@@ -2,6 +2,22 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/merge-intervals/
+
+	Input:
+	4
+	1 3
+	2 6
+	8 10
+	15 18
+
+	Output:
+	1 6
+	8 10
+	15 18
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

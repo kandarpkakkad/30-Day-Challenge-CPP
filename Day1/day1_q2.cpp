@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/sort-colors/
+
+	Input:
+	6
+	1 0 2 0 1 2
+
+	Output:
+	0 0 1 1 2 2
+	0 0 1 1 2 2
+*/
+
 void swap(long long &a, long long &b) {
 	long long t = a;
 	a = b;

@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/find-the-duplicate-number/
+
+	Input:
+	6
+	1 2 2 5 3 3
+
+	Output:
+	2
+	2
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

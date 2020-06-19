@@ -2,6 +2,19 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/maximum-subarray
+
+	Input:
+	6
+	-1 0 1 -2 4 5
+
+	Output:
+	Starting: 5	Ending: 6
+	9
+	9
+*/
+
 long long max_mid_sub_array(long long arr[], long long l, long long mid, long long r) {
 	// Now we will find maximum sum from mid to left
 	long long sum = 0;

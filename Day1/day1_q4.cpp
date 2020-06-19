@@ -2,6 +2,19 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/merge-sorted-array/
+
+	Input:
+	6 4
+	0 1 3 4 5 6
+	2 7 8 9
+
+	Output:
+	0 1 2 3 4 5 6 7 8 9
+	0 1 2 2 3 4 5 7 8 9
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
