@@ -6,6 +6,8 @@ Thank you [take U forward](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz6
 
 The solutions will be included but if you want to search or practice for different solution, search the question in leetcode and geeksforgeeks. The links for leetcode questions will be given in comments in the solution of the question.
 
+If you have not set up your working environment, refer to [this video](https://www.youtube.com/watch?v=Fql_b-xZYwQ).
+
 To directly run the code given, change input.txt to give your input and keep the folders and file as they are. The solutions gives can be run on gcc_14 or above compilers.
 
 ### Day 1 -> Arrays
