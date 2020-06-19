@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-	Merge 2 sorted linked lists.
+	https://leetcode.com/problems/merge-two-sorted-lists/
 
 	Input:
 	6 5

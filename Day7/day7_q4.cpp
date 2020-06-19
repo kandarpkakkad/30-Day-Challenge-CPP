@@ -2,6 +2,17 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/trapping-rain-water/
+
+	Input:
+	12
+	0 1 0 2 1 0 1 3 2 1 2 1
+
+	Output:
+	6
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-	Find the starting of the loop.
+	https://leetcode.com/problems/linked-list-cycle/
 
 	Input:
 	6

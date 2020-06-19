@@ -3,7 +3,7 @@
 using namespace std;
 
 /*
-	3 Sum
+	https://leetcode.com/problems/3sum/
 
 	Input:
 	6 9
