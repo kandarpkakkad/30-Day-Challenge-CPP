@@ -2,6 +2,31 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/set-matrix-zeroes/
+
+	You need to run the methods one by one.
+
+	Input:
+	3 4
+	0 1 2 0
+	3 4 5 2
+	1 3 1 5
+
+	Output:
+	0 0 0 0
+	0 4 5 2
+	0 3 1 5
+
+	0 0 0 0
+	0 4 5 2
+	0 3 1 5
+
+	0 0 0 0
+	0 4 5 2
+	0 3 1 5
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
@@ -45,6 +70,7 @@ int main() {
 		}
 		cout << endl;
 	}
+	cout << endl;
 
 	// Method 2:
 	// We will create two sets that will store the rows and columns which has 0 and then we will make those rows and columns 0
@@ -75,6 +101,7 @@ int main() {
 		}
 		cout << endl;
 	}
+	cout << endl;
 
 	// Method 3:
 	// Here we will make the 0s on the 0th row and col on the basis of 0 in the ith row or col. Then we will convert every row and col to 0 that has 0 in the 0th row and col respectively.

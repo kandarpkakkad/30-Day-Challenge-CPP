@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/global-and-local-inversions
+
+	Input:
+	6
+	1 5 3 4 2 1
+
+	Output:
+	9
+	9
+*/
+
 long long merge(long long arr[], long long temp[], long long left, long long mid, long long right) {
 	long long l, m, k;
 	long long inversions = 0;

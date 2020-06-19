@@ -2,6 +2,20 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+
+	Input:
+	6
+	7 1 5 3 6 4
+
+	Output:
+	5
+	5
+	5
+	5
+*/
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);

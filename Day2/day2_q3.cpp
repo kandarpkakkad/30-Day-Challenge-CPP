@@ -2,6 +2,17 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/next-permutation/
+
+	Input:
+	5
+	1 5 3 4 2
+
+	Output:
+	1 5 4 2 3
+*/
+
 void swap(long long &a, long long &b) {
 	long long t = a;
 	a = b;
