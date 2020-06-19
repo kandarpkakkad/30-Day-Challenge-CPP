@@ -35,7 +35,8 @@ To directly run the code given, change input.txt to give your input and keep the
 3. Count trailing zeros in factorial of a number 
 4. Find GCD in Log N 
 5. Grid Unique Paths 
-6. Go through Puzzles from GFG (Search on own)
+6. GCD of strings
+7. Go through Puzzles from GFG (Search on own)
 
 ### Day 4 -> Hashing
 
