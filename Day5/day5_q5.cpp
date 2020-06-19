@@ -8,13 +8,7 @@ struct node {
 } *head, *temp, *NEW;
 
 void delete_node(struct node *n) {
-	if (n->next) {
-		n->val = n->next->val;
-		n->next = n->next->next;
-	}
-	else {
-		free(n);
-	}
+	*n = *n->next;
 }
 
 int main() {
@@ -43,7 +37,7 @@ int main() {
 	// Method 1:
 	// We change the value of node to that of the node after that and change the link of the node to the link of next node.
 	// Time Complexity: O(1)
-	// Space Complexity: O(0)
+	// Space Complexity: O(1)
 	struct node *a1, *a2, *a3, *a4;
 	a1 = head;
 	delete_node(a1);

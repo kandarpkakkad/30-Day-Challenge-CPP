@@ -7,6 +7,16 @@ struct node {
 	struct node *next;
 }*head, *temp, *NEW;
 
+struct node * reverse_list(struct node * head) {
+	if (!head || !head->next) {
+		return head;
+	}
+	struct node * n = reverse_list(head->next);
+	head->next->next = head;
+	head->next = NULL;
+	return n;
+}
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
@@ -65,5 +75,17 @@ int main() {
 		}
 		cout << endl;
 	}
+
+	// Method 2:
+	// Recursive method to reverse the list.
+	// Time Complexity: O(n)
+	// Space Complexity: O(1)
+	head = reverse_list(head);
+	temp = head;
+	while (temp != NULL) {
+		cout << temp->val << " ";
+		temp = temp->next;
+	}
+	cout << endl;
 	return 0;
 }
