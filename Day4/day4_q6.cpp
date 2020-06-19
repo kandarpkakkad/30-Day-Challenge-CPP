@@ -15,7 +15,7 @@ int main() {
 	// We create a set for characters and if we find the character in the set we remove the charater from the set and increament the starting position else increament the ending position and add the new element in the set.
 	// Time Complexity: O(n)
 	// Space Complexity: O(n)
-	set<char> st;
+	unordered_set<char> st;
 	long long i = 0, j = 0;
 	long long ans = 0;
 	while (i < N && j < N) {

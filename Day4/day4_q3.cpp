@@ -63,5 +63,31 @@ int main() {
 		x = it->first;
 	}
 	cout << ans << endl;
+
+	// Method 3:
+	// We check the left and the right boundary.
+	// Time Complexity: O(n)
+	// Space Complexity: O(n)
+	unordered_map<long long, long long> umap;
+	ans = 0;
+	for (long long i = 0; i < N; i++) {
+		if (umap[arr[i]]) {
+			continue;
+		}
+		if (umap[arr[i] - 1] && umap[arr[i] + 1]) {
+			umap[arr[i]] = umap[arr[i] - umap[arr[i] - 1]] = umap[arr[i] + umap[arr[i] + 1]] = umap[arr[i] - 1] + umap[arr[i] + 1] + 1;
+		}
+		else if (umap[arr[i] - 1]) {
+			umap[arr[i]] = umap[arr[i] - umap[arr[i] - 1]] = umap[arr[i] - 1] + 1;
+		}
+		else if (umap[arr[i] + 1]) {
+			umap[arr[i]] = umap[arr[i] + umap[arr[i] + 1]] = umap[arr[i] + 1] + 1;
+		}
+		else {
+			umap[arr[i]] = 1;
+		}
+		ans = max(ans, umap[arr[i]]);
+	}
+	cout << ans << endl;
 	return 0;
 }

@@ -33,7 +33,7 @@ int main() {
 	// Method 2:
 	// We will compute prefix xor_sum and store it in a map and traverse the map to see if the xor sum is k or not.
 	// Time Complexity: O(n)
-	// Space Complexity: O(1)
+	// Space Complexity: O(n)
 	ans = 0;
 	long long prexorsum[N];
 	unordered_map<long long, long long> mp;
