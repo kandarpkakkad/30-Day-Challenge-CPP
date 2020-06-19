@@ -119,5 +119,44 @@ int main() {
 		}
 		cout << "Joining point is " << temp->val - 1 << "." << endl;
 	}
+
+	// Method 3:
+	// Find the difference of number of node in both the lists. and traverse bigger list difference number of times. Then traverse both list in parallel to find the common node.
+	// Time Complexity: O(n)
+	// Space Complexity: O(1)
+	long long n = 0, m = 0;
+	struct node *a = head1, *b = head2;
+	h1 = head1;
+	h2 = head2;
+	while (h1) {
+		h1 = h1->next;
+		n++;
+	}
+	while (h2) {
+		h2 = h2->next;
+		m++;
+	}
+	if (n - m > 0) {
+		long long p = n - m;
+		while (p--) {
+			a = a->next;
+		}
+	}
+	else {
+		long long p = m - n;
+		while (p--) {
+			b = b->next;
+		}
+	}
+	while (a && b && a != b) {
+		a = a->next;
+		b = b->next;
+	}
+	if (!a || !b) {
+		cout << "No joining point." << endl;
+	}
+	else {
+		cout << "Joining point is " << a->val << endl;
+	}
 	return 0;
 }

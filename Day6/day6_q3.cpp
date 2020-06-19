@@ -40,6 +40,34 @@ struct node* reversek(struct node *head, long long k) {
 	return pre;
 }
 
+struct node * reversek_2(struct node *head, long long k) {
+	struct node *curr, *prev, *post;
+	curr = head;
+	prev = NULL;
+	long long i = k;
+	while (curr && i--) {
+		post = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = post;
+	}
+	if (!curr && i) {
+		curr = prev;
+		prev = NULL;
+		while (curr) {
+			post = curr->next;
+			curr->next = prev;
+			prev = curr;
+			curr = post;
+		}
+		return prev;
+	}
+	if (post) {
+		head->next = reversek_2(post, k);
+	}
+	return prev;
+}
+
 int main() {
 #ifndef ONLINE_JUDGE
 	freopen("../input.txt", "r", stdin);
@@ -63,6 +91,30 @@ int main() {
 	// Space Complexity: O(1)
 	struct node *ans = reversek(head, k);
 	struct node *pre, *curr, *post;
+	pre = NULL;
+	curr = ans;
+	post = ans->next;
+	while (curr != NULL) {
+		curr->next = pre;
+		pre = curr;
+		curr = post;
+		if (curr) {
+			post = post->next;
+		}
+	}
+	ans = pre;
+	temp = ans;
+	while (temp) {
+		cout << temp->val << " ";
+		temp = temp->next;
+	}
+	cout << endl;
+
+	// Method 2:
+	// Recursive method again with same logic but we will check that k elements are there while reversing beccause not having k elements occurs only once. So if that condition occurs we will reverse the reversed list to make it as it was.
+	// Time Complexity: O(n)
+	// Space Complexity: O(1)
+	ans = reversek_2(ans, k);
 	pre = NULL;
 	curr = ans;
 	post = ans->next;
