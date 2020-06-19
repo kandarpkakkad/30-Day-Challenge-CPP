@@ -2,11 +2,11 @@
 
 [Refer to this video before starting this challenge](https://www.youtube.com/watch?v=WNtzUR_MwUQ&list=WL&index=5&t=0s)
 
-Thank you [take U forward](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig) for the advice.
+Thank you [take U forward](https://www.youtube.com/channel/UCJskGeByzRRSvmOyZOz61ig) for the list of practice questions.
 
 The solutions will be included but if you want to search or practice for different solution, search the question in leetcode and geeksforgeeks. The links for leetcode questions will be given in comments in the solution of the question.
 
-To directly run the code given, change input.txt to give your input and keep the folders and file as they are.
+To directly run the code given, change input.txt to give your input and keep the folders and file as they are. The solutions gives can be run on gcc_14 or above compilers.
 
 ### Day 1 -> Arrays
 
