@@ -2,6 +2,21 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/reverse-linked-list/
+
+	You have to run the methods one by one.
+
+	Input:
+	5
+	1 2 3 4 5
+
+	Output:
+	5 4 3 2 1
+	1 2 3 4 5
+	1 2 3 4 5
+*/
+
 struct node {
 	long long val;
 	struct node *next;
@@ -33,10 +48,6 @@ int main() {
 		NEW->next = head;
 		head = NEW;
 	}
-	// Method 1:
-	// We keep 3 pointers and change the link to previous pointer to reverse the linked list
-	// Time Complexity: O(n)
-	// Space Complexity: O(1)
 	if (head == NULL) {
 		cout << "No Elements" << endl;
 	}
@@ -48,6 +59,11 @@ int main() {
 		}
 		cout << endl;
 	}
+
+	// Method 1:
+	// We keep 3 pointers and change the link to previous pointer to reverse the linked list
+	// Time Complexity: O(n)
+	// Space Complexity: O(1)
 	struct node *pre, *curr, *post;
 	if (head == NULL) {
 		cout << "No Elements" << endl;

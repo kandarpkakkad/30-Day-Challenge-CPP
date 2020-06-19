@@ -2,6 +2,20 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/add-two-numbers/
+
+	Input:
+	3 4
+	2 4 7
+	5 6 4 2
+
+	Output:
+	  7 4 2 0
+	+ 2 4 6 5
+	= 9 8 8 5
+*/
+
 struct node {
 	long long val;
 	struct node *next;

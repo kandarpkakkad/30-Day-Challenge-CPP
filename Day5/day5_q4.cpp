@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+
+	Input:
+	6 4
+	0 1 3 5 6 7
+
+	Output:
+	7 6 5 3 1 0
+	7 6 3 1 0
+*/
+
 struct node {
 	long long val;
 	struct node *next;

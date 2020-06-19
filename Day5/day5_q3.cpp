@@ -2,6 +2,21 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/merge-two-sorted-lists/
+
+	Input:
+	6 4
+	0 1 3 5 6 7
+	2 4 8 9
+
+	Output:
+	7 6 5 3 1 0
+	9 8 4 2
+	7 6 5 3 1 0 9 8 4 2
+	7 6 5 3 1 0 9 8 4 2
+*/
+
 struct node {
 	long long val;
 	struct node *next;

@@ -2,6 +2,19 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/middle-of-the-linked-list/
+
+	Input:
+	5
+	1 2 3 4 5
+
+	Output:
+	5 4 3 2 1
+	Middle Element: 3
+	Middle Element: 3
+*/
+
 struct node {
 	long long val;
 	struct node *next;

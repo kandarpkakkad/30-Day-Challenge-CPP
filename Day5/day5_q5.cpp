@@ -2,6 +2,21 @@
 
 using namespace std;
 
+/*
+	https://leetcode.com/problems/delete-node-in-a-linked-list/
+
+	Input:
+	6
+	0 1 3 5 6 7
+
+	Output:
+	7 6 5 3 1 0 -- original
+	6 5 3 1 0 -- head
+	6 3 1 0 -- head->next
+	6 1 0 -- head->next
+	6 0 -- head->next
+*/
+
 struct node {
 	long long val;
 	struct node *next;
