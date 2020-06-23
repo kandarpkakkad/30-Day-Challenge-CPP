@@ -98,9 +98,8 @@ To directly run the code given, change input.txt to give your input and keep the
 1. Combination sum-1 
 2. Combination sum-2 
 3. Palindrome Partioning 
-4. Subset Sum-1 
-5. Subset Sum-2 
-6. K-th permutation Sequence
+4. Subset Sum
+5. K-th permutation Sequence
 
 ### Day 11 -> Divide and Conquer
 
