@@ -121,12 +121,13 @@ To directly run the code given, change input.txt to give your input and keep the
 
 ### Day 13 -> Stack and Queue
 
-1. Implement Stack / Implement Queue
-2. BFS 
-3. Implement Stack using Queue
-4. Implement Queue using Stack 
-5. Check for balanced parentheses 
-6. Next Greater Element 
+1. Implement Stack 
+2. Implement Queue
+3. BFS 
+4. Implement Stack using Queue
+5. Implement Queue using Stack 
+6. Check for balanced parentheses 
+7. Next Greater Element 
 
 ### Day 14 -> Stack and Queue
 
