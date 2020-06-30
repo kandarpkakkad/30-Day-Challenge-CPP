@@ -158,12 +158,13 @@ To directly run the code given, change input.txt to give your input and keep the
 
 ### Day 17 -> Binary Tree
 
-1. Inorder Traversal (with recursion and without recursion) 
-2. Preorder Traversal (with recursion and without recursion) 
-3. Postorder Traversal (with recursion and without recursion)  
-4. LeftView Of Binary Tree
-5. Bottom View of Binary Tree
-6. Top View of Binary Tree
+1. Insertion and Deletion in Binary Tree.
+2. Inorder Traversal (with recursion and without recursion) 
+3. Preorder Traversal (with recursion and without recursion) 
+4. Postorder Traversal (with recursion and without recursion)  
+5. LeftView Of Binary Tree
+6. Bottom View of Binary Tree
+7. Top View of Binary Tree
 
 ### Day 18 -> Binary Tree
 
