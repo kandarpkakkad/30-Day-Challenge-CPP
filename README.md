@@ -180,9 +180,8 @@ To directly run the code given, change input.txt to give your input and keep the
 1. Maximum path sum 
 2. Construct Binary Tree from inorder and preorder 
 3. Construct Binary Tree from Inorder and Postorder 
-4. Symmetric Binary Tree 
-5. Flatten Binary Tree to LinkedList 
-6. Check if Binary Tree is mirror of itself or not
+4. Symmetric Binary Tree/Mirror of itself or not
+5. Flatten Binary Tree to LinkedList
 
 ### Day 20 -> Binary Search Tree
 
