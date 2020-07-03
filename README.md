@@ -188,10 +188,9 @@ To directly run the code given, change input.txt to give your input and keep the
 1. Insert and Delete in BST
 2. Populate Next Right pointers of Tree 
 3. Search given Key in BST 
-4. Construct BST from given keys. 
-5. Check is a BT is BST or not  
-6. Find LCA of two nodes in BST 
-7. Find the inorder predecessor/successor of a given Key in BST.
+4. Check is a BT is BST or not  
+5. Find LCA of two nodes in BST 
+6. Find the inorder predecessor/successor of a given Key in BST.
 
 ### Day 21 -> Binary Search Tree
 
