@@ -268,4 +268,8 @@ To directly run the code given, change input.txt to give your input and keep the
 
 ### Day 30 -> Your Projects And Its Presentation
 
-1. Make a note of how will your represent your projects, and prepare all questions related to tech which you have used in your projects. Prepare a note which you can say for 3-10 minutes when he asks you that say something about the project.
+1. Make a note of how you will represent your projects, and prepare all questions related to technology which you have used in your projects. Prepare a note which you can say for 3-10 minutes when they asks you that say something about your projects.
+
+### Bonus Days -> Revise OOP Concepts
+
+1. Revise OOP using Java or CPP or Python. Learn how to make templates and libraries/packages.
