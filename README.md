@@ -273,3 +273,4 @@ To directly run the code given, change input.txt to give your input and keep the
 ### Bonus Days -> Revise OOP Concepts
 
 1. Revise OOP using Java or CPP or Python. Learn how to make templates and libraries/packages.
+2. Learn DSU(Disjoint Set Union) Datastructure.
