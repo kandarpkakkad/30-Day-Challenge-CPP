@@ -161,16 +161,16 @@ int main() {
 	// The idea is simple. We need to find disconnected graphs. We will do it using DFS.
 	// Time Complexity: O(n*m)
 	// Space Complexity: O(n*m) (recursive stack)
-	// long long ans = 0;
-	// for (long long i = 0; i < N; i++) {
-	// 	for (long long j = 0; j < M; j++) {
-	// 		if (arr[i][j] == 1) {
-	// 			ans++;
-	// 			dfs(arr, i, j);
-	// 		}
-	// 	}
-	// }
-	// cout << ans << endl;
+	long long ans = 0;
+	for (long long i = 0; i < N; i++) {
+		for (long long j = 0; j < M; j++) {
+			if (arr[i][j] == 1) {
+				ans++;
+				dfs(arr, i, j);
+			}
+		}
+	}
+	cout << ans << endl;
 
 	// Method 2:
 	// We will use DSU to merge the islands and the remaining sets at the end will the count of islands.
