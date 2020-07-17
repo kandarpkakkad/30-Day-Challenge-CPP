@@ -223,7 +223,7 @@ To directly run the code given, change input.txt to give your input and keep the
 ### Day 24 -> Graph
 
 1. SCC(using KosaRaju’s algo) 
-2. Djisktra’s Algorithm 
+2. Dijkstra’s Algorithm 
 3. Bellman Ford Algo 
 4. Floyd Warshall Algorithm  
 5. MST using Prim’s Algo 
