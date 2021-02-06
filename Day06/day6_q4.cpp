@@ -98,7 +98,7 @@ int main() {
 			break;
 		}
 	}
-	if (fast == NULL) {
+	if (fast == NULL || fast->next == NULL) {
 		cout << "No Loop" << endl;
 	}
 	else {
